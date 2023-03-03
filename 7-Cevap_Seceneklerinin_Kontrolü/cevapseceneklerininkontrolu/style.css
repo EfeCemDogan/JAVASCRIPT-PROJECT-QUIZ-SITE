@@ -65,3 +65,6 @@
     background: #f8d7da;
 }
 
+.quiz_box .option_list .option.disabled {
+    pointer-events: none;
+}
