@@ -1,26 +1,21 @@
-// OOP: Nesne Tabanlı Programlam a
+// OOP: Nesne Tabanlı Programlama
 
-// soru Parametresi
 function Soru(soruMetni, cevapSecenekleri, dogruCevap) {
     this.soruMetni = soruMetni;
     this.cevapSecenekleri = cevapSecenekleri;
     this.dogruCevap = dogruCevap;
-
 }
 
-Soru.prototype.cevabıKontrolEt = function(cevap) {
+Soru.prototype.cevabiKontrolEt = function(cevap) {
     return cevap === this.dogruCevap
 }
 
-
-
-// Sorular
 let sorular = [
-    new Soru("1-Hangisi javascript paket yönetim uygulamasıdır?", {a: "Node.js", b: "Nuget", c: "Npm"}, "c"),
-    new Soru("2-Hangisi .Net paket yönetim uygulamasıdır?", {a: "Node.js", b: "Nuget", c: "Npm"}, "b"),
-    new Soru("3-Hangisi javascript paket yönetim uygulamasıdır?", {a: "Node.js", b: "Nuget", c: "Npm"}, "c"),
-    new Soru("4-Hangisi .Net paket yönetim uygulamasıdır?", {a: "Node.js", b: "Nuget", c: "Npm"}, "b")
-]
+    new Soru("1-Hangisi javascript paket yönetim uygulasıdır?", { a: "Node.js", b: "Typescript", c: "Npm" , d: "Nuget" }, "c"),
+    new Soru("2-Hangisi javascript paket yönetim uygulasıdır?", { a: "Node.js", b: "Typescript", c: "Npm" }, "c"),
+    new Soru("3-Hangisi javascript paket yönetim uygulasıdır?", { a: "Node.js", b: "Typescript", c: "Npm" }, "c"),
+    new Soru("4-Hangisi javascript paket yönetim uygulasıdır?", { a: "Node.js", b: "Typescript", c: "Npm" }, "c")
+];
 
 function Quiz(sorular) {
     this.sorular = sorular;
@@ -32,7 +27,6 @@ Quiz.prototype.soruGetir = function() {
 }
 
 const quiz = new Quiz(sorular);
-
 
 document.querySelector(".btn_start").addEventListener("click", function() {
     document.querySelector(".quiz_box").classList.add("active");
@@ -64,7 +58,3 @@ function soruGoster(soru) {
     document.querySelector(".question_text").innerHTML = question;
     document.querySelector(".option_list").innerHTML = options;
 }
-
-
-
-
